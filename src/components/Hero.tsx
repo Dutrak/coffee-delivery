@@ -1,5 +1,5 @@
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
-import HeroImage from "../../../assets/Hero.svg"
+import HeroImage from "../assets/Hero.svg"
 
 export function Hero() {
   return (
