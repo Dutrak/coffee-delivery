@@ -3,7 +3,7 @@ import Logo from "../assets/Logo.svg";
 
 export function Header() {
   return (
-    <header className="flex flex-row justify-between">
+    <header className="flex flex-row justify-between px-40">
       <img src={Logo} alt="Logo da Alura" />
       <div className="flex flex-row gap-3 ">
         <div className="flex gap-0.5 bg-purple-light rounded-lg items-center justify-center h-9 p-2">

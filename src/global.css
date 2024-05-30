@@ -4,6 +4,6 @@
 
 @layer components {
   body {
-    @apply bg-background h-screen w-screen px-40 py-8 font-roboto;
+    @apply bg-background h-screen w-screen py-8 font-roboto;
   }
 }
