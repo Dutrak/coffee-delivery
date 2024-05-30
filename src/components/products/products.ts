@@ -1,11 +1,4 @@
-export interface IProduct {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  tags: string[];
-}
+import { IProduct } from "../../reducers/cart/reducer";
 
 
 export const products: IProduct[] = [
@@ -15,7 +8,8 @@ export const products: IProduct[] = [
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: 9.90,
     image: './products/expresso.png',
-    tags: ['Tradicional']
+    tags: ['Tradicional'],
+    quantity: 0
   },
   {
     id: 2,
@@ -23,7 +17,8 @@ export const products: IProduct[] = [
     description: 'Expresso diluído, menos intenso que o tradicional',
     price: 9.90,
     image: './products/americano.png',
-    tags: ['Tradicional']
+    tags: ['Tradicional'],
+    quantity: 0
   },
   {
     id: 3,
@@ -31,7 +26,8 @@ export const products: IProduct[] = [
     description: 'Café expresso tradicional com espuma cremosa',
     price: 9.90,
     image: './products/expresso-cremoso.png',
-    tags: ['Tradicional']
+    tags: ['Tradicional'],
+    quantity: 0
   },
   {
     id: 4,
@@ -39,7 +35,8 @@ export const products: IProduct[] = [
     description: 'Bebida preparada com café expresso e cubos de gelo',
     price: 9.90,
     image: './products/cafe-gelado.png',
-    tags: ['Tradicional', 'Gelado']
+    tags: ['Tradicional', 'Gelado'],
+    quantity: 0
   },
   {
     id: 5,
@@ -47,7 +44,8 @@ export const products: IProduct[] = [
     description: 'Meio a meio de expresso tradicional com leite vaporizado',
     price: 9.90,
     image: './products/cafe-com-leite.png',
-    tags: ['Tradicional', 'Com Leite']
+    tags: ['Tradicional', 'Com Leite'],
+    quantity: 0
   },
   {
     id: 6,
@@ -55,7 +53,8 @@ export const products: IProduct[] = [
     description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: 9.90,
     image: './products/latte.png',
-    tags: ['Tradicional', 'Com Leite']
+    tags: ['Tradicional', 'Com Leite'],
+    quantity: 0
   },
   {
     id: 7,
@@ -63,7 +62,8 @@ export const products: IProduct[] = [
     description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
     price: 9.90,
     image: './products/capuccino.png',
-    tags: ['tradicional', 'Com Leite']
+    tags: ['tradicional', 'Com Leite'],
+    quantity: 0
   },
   {
     id: 8,
@@ -71,7 +71,8 @@ export const products: IProduct[] = [
     description: 'Café expresso misturado com um pouco de leite quente e espuma',
     price: 9.90,
     image: './products/macchiato.png',
-    tags: ['Tradicional', 'Com Leite']
+    tags: ['Tradicional', 'Com Leite'],
+    quantity: 0
   },
   {
     id: 9,
@@ -79,7 +80,8 @@ export const products: IProduct[] = [
     description: 'Café expresso com calda de chocolate, pouco leite e espuma',
     price: 9.90,
     image: './products/mocaccino.png',
-    tags: ['Tradicional', 'Com Leite']
+    tags: ['Tradicional', 'Com Leite'],
+    quantity: 0
   },
   {
     id: 10,
@@ -87,7 +89,8 @@ export const products: IProduct[] = [
     description: 'Bebida feita com chocolate dissolvido no leite quente e café',
     price: 9.90,
     image: './products/chocolate-quente.png',
-    tags: ['Especial', 'Com Leite']
+    tags: ['Especial', 'Com Leite'],
+    quantity: 0
   },
   {
     id: 11,
@@ -95,7 +98,8 @@ export const products: IProduct[] = [
     description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
     price: 9.90,
     image: './products/cubano.png',
-    tags: ['Especial', 'Alcoólico', 'Gelado']
+    tags: ['Especial', 'Alcoólico', 'Gelado'],
+    quantity: 0
   },
   {
     id: 12,
@@ -103,7 +107,8 @@ export const products: IProduct[] = [
     description: 'Bebida adocicada preparada com café e leite de coco',
     price: 9.90,
     image: './products/havaiano.png',
-    tags: ['Especial']
+    tags: ['Especial'],
+    quantity: 0
   },
   {
     id: 13,
@@ -111,7 +116,8 @@ export const products: IProduct[] = [
     description: 'Bebida preparada com grãos de café árabe e especiarias',
     price: 9.90,
     image: './products/arabe.png',
-    tags: ['Especial']
+    tags: ['Especial'],
+    quantity: 0
   },
   {
     id: 14,
@@ -119,6 +125,7 @@ export const products: IProduct[] = [
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: 9.90,
     image: './products/irlandes.png',
-    tags: ['Especial', 'Alcoólico']
+    tags: ['Especial', 'Alcoólico'],
+    quantity: 0
   },
 ]
