@@ -38,7 +38,6 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   // Add the addToCart function
   function addToCart(product: IProduct) {
     dispatch(addToCartAction(product));
-    console.log(cartState);
   }
 
   // Add the removeFromCart function

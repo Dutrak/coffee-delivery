@@ -5,10 +5,10 @@ import { CartContextProvider } from "./contexts/CartContext";
 
 export function App() {
   return (
-    <BrowserRouter basename="/coffee-delivery">
-      <CartContextProvider>
+    <BrowserRouter basename='/'>
+      <CartContextProvider >
         <Router />
-      </CartContextProvider>
-    </BrowserRouter>
+      </CartContextProvider >
+    </BrowserRouter >
   )
 }

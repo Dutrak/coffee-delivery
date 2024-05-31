@@ -13,7 +13,7 @@ import { CartContext } from "../contexts/CartContext";
 const orderFormValidationSchema = z.object({
   cep: z.string().min(8, { message: 'CEP inválido' }),
   rua: z.string().min(3, { message: 'Rua inválida' }),
-  numero: z.string().min(1, { message: 'Número inválido' }),
+  numero: z.string().min(3, { message: 'Número inválido' }),
   complemento: z.string().min(1, { message: 'Complemento inválido' }),
   bairro: z.string().min(3, { message: 'Bairro inválido' }),
   cidade: z.string().min(3, { message: 'Cidade inválida' }),

@@ -15,7 +15,6 @@ export function OrderSection() {
   const [data, setData] = useState({} as ViaCepAddress)
 
   const cep = watch('cep')
-  watch('rua')
 
   useEffect(() => {
     async function fetchAddress() {
@@ -68,7 +67,7 @@ export function OrderSection() {
                 {...register("rua")} value={data.logradouro || undefined} />
 
               <div className="flex gap-3">
-                <input type="text" id="numero" placeholder="Número" className="w-[12.5rem] h-9 border border-base-button bg-base-input rounded-[4px] p-4
+                <input type="number" min={0} id="numero" placeholder="Número" className="w-[12.5rem] h-9 border border-base-button bg-base-input rounded-[4px] p-4
                             text-sm leading-snug text-base-text placeholder:text-sm placeholder:text-base-label placeholder:leading-snug focus:border-yellow-dark"
                   {...register("numero")} />
 
