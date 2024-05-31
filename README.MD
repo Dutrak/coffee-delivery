@@ -18,7 +18,7 @@ A Aplicação também conta com um sistema de carrinho dinâmico que salva infor
 1. Clone o repositório:
 
   ```bash
-  git clone https://github.com/seu-nome-de-usuario/entrega-de-cafe.git
+  git clone https://github.com/dutrak/coffee-delivery.git
   ```
 
 2. Instale as dependências:
