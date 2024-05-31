@@ -4,6 +4,7 @@ export enum ActionTypes {
   ADD_TO_CART = 'ADD_TO_CART',
   REMOVE_FROM_CART = 'REMOVE_FROM_CART',
   DELETE_FROM_CART = 'DELETE_FROM_CART',
+  RESET_CART = 'RESET_CART',
 }
  
 export function addToCartAction(newProduct: IProduct) {
@@ -30,5 +31,12 @@ export function deleteFromCartAction(product: IProduct) {
     payload: {
       product: product,
     }
+  };
+}
+
+export function resetCartAction() { 
+  return {
+    type: ActionTypes.RESET_CART,
+    payload: {},
   };
 }

@@ -1,12 +1,13 @@
 import { createContext, useEffect, useReducer } from "react";
 import { IProduct, cartReducer } from "../reducers/cart/reducer";
-import { addToCartAction, deleteFromCartAction, removeFromCartAction } from "../reducers/cart/action";
+import { addToCartAction, deleteFromCartAction, removeFromCartAction, resetCartAction } from "../reducers/cart/action";
 
 interface CartContextData {
   cartState: IProduct[];
   addToCart: (product: IProduct) => void;
   removeFromCart: (product: IProduct) => void;
   deleteFromCart: (product: IProduct) => void;
+  resetCart: () => void;
 }
 
 interface CartContextProviderProps {
@@ -50,8 +51,12 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     dispatch(deleteFromCartAction(product));
   }
 
+  function resetCart() {
+    dispatch(resetCartAction());
+  }
+
   return (
-    <CartContext.Provider value={{ cartState, addToCart, removeFromCart, deleteFromCart }}>
+    <CartContext.Provider value={{ cartState, addToCart, removeFromCart, deleteFromCart, resetCart }}>
       {children}
     </CartContext.Provider>
   )

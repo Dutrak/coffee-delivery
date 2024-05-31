@@ -94,7 +94,7 @@ export function CoffeeSection() {
               <p className="text-xl text-base-subtitle leading-snug font-bold">R$ {(totalValueInCart + orderFee).toFixed(2).replace(".", ",")}</p>
             </div>
           </div><div>
-              <button className="w-full h-12 bg-yellow rounded-md text-white text-sm font-bold leading-relaxed hover:bg-yellow-dark transition-all">CONFIRMAR PEDIDO</button>
+              <button type="submit" className="w-full h-12 bg-yellow rounded-md text-white text-sm font-bold leading-relaxed hover:bg-yellow-dark transition-all">CONFIRMAR PEDIDO</button>
             </div></>
         )}
 

@@ -22,13 +22,17 @@
 - [x] Update components to use the cart context
 - [x] Save cart on local storage
 
-## Checkout Page
+## Checkout Page ✓
 - [x] Separate the page into components
   - [x] Header Component
   - [x] Order Section Component
   - [x] Coffee Section Component
       - [x] Use cart context for updating values
+  - [x] Success Component
+    - [x] Get Data from form
 - [x] Get cart items
 - [x] Get total value from cart + delivery shipping
-- [ ] Create order form
-- [ ] Send form (save on local storage?)
+- [X] Create order form
+  - [x] Use ViaCep API to autocomplete address
+- [x] Send values to success component
+- [x] Save address on local storage

@@ -13,14 +13,14 @@ export interface IProduct {
 interface IAction  {
   type: ActionTypes;
   payload: {
-    product: IProduct,
+    product?: IProduct,
   }
 }
 
 export function cartReducer(state: IProduct[], action: IAction) {
 
   // Create a variable to store the product that is already in the cart
-  const productAlreadyInCart = state.find(product => product.id === action.payload.product.id);
+  const productAlreadyInCart = state.find(product => product.id === action.payload.product?.id);
 
   switch (action.type) {
       
@@ -33,7 +33,7 @@ export function cartReducer(state: IProduct[], action: IAction) {
       // If the product is already in the cart, increase the quantity without adding a new product
       if (productAlreadyInCart) {
         return state.map(product => {
-          if (product.id === action.payload.product.id) {
+          if (product.id === action.payload.product?.id) {
             return { ...product, quantity: product.quantity + 1 };
           }
           return product;
@@ -46,16 +46,16 @@ export function cartReducer(state: IProduct[], action: IAction) {
     // Add a case to remove a product from the cart
     case ActionTypes.REMOVE_FROM_CART:
       // If there is no product ID or the product is not in the cart, return the current state
-      if (!action.payload.product.id || !productAlreadyInCart) return state;
+      if (!action.payload.product?.id || !productAlreadyInCart) return state;
 
       // If the product is in the cart, remove it
       if (productAlreadyInCart.quantity === 1) { 
-        return state.filter(product => product.id !== action.payload.product.id);
+        return state.filter(product => product.id !== action.payload.product?.id);
       }
 
       // Decrease product quantity if quantity is greater than 0
       return state.map(product => {
-        if (product.id === action.payload.product.id && product.quantity > 0) {
+        if (product.id === action.payload.product?.id && product.quantity > 0) {
           return { ...product, quantity: product.quantity - 1 };
         }
         return product;
@@ -65,10 +65,13 @@ export function cartReducer(state: IProduct[], action: IAction) {
     case ActionTypes.DELETE_FROM_CART:
 
       // If there is no product ID or the product is not in the cart, return the current state
-      if (!action.payload.product.id || !productAlreadyInCart) return state;
+      if (!action.payload.product?.id || !productAlreadyInCart) return state;
 
       // If the product is in the cart, remove it
-      return state.filter(product => product.id !== action.payload.product.id);
+      return state.filter(product => product.id !== action.payload.product?.id);
+    
+    case ActionTypes.RESET_CART:
+      return [];
     
     default:
       return state;
