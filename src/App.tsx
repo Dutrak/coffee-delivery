@@ -5,7 +5,7 @@ import { CartContextProvider } from "./contexts/CartContext";
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/coffee-delivery">
       <CartContextProvider>
         <Router />
       </CartContextProvider>
