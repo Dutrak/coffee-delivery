@@ -1,11 +1,12 @@
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
-import HeroImage from "../assets/Hero.svg"
+import HeroImage from "/Hero.svg"
+import Herobg from "/hero-bg.svg"
 
 export function Hero() {
   return (
-    <div className="bg-hero bg-contain py-24 w-screen">
-      <section className="flex gap-14 mx-40 justify-between">
-        <aside className="flex gap-16 flex-col max-h-[588px]">
+    <div className="relative">
+      <section className="flex gap-14 justify-between max-w-[1120px] mx-auto py-24">
+        <aside className="flex gap-16 flex-col">
           <div className="flex flex-col gap-4">
             <h1 className="font-baloo2 font-extrabold text-5xl leading-snug text-base-title">Encontre o café perfeito para qualquer hora do dia</h1>
             <h2 className="text-xl leading-snug text-base-subtitle">Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</h2>
@@ -44,6 +45,9 @@ export function Hero() {
         </aside>
         <img src={HeroImage} alt="Café" />
       </section>
+      <img src={Herobg} alt="Café" className="absolute top-0 left-0 w-screen max-h-[544px] object-cover" />
     </div>
+
+
   )
 }

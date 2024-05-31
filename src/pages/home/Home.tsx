@@ -5,7 +5,7 @@ import ProductList from "../../components/products/ProductsList";
 export function Home() {
 
   return (
-    <main className="mb-40">
+    <main className="mb-40 relative">
       <Header />
       <Hero />
       <ProductList />

@@ -11,7 +11,7 @@ export default {
         'baloo2': ['"Baloo 2"', 'sans-serif'],
       },
       backgroundImage: {
-        'hero': "url('/src/assets/HeroBackground.svg')",
+        'hero': "url('/hero-bg.svg')",
       },
       colors: {
         'base-title': '#272221',
