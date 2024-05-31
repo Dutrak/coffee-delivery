@@ -20,14 +20,7 @@ interface IAction  {
 export function cartReducer(state: IProduct[], action: IAction) {
 
   // Create a variable to store the product that is already in the cart
-  let productAlreadyInCart: IProduct | undefined = undefined;
-
-  // Typescript will throw an error if we try to access the id property of action.product without checking if it exists
-  if (action.type === ActionTypes.ADD_TO_CART) {
-    productAlreadyInCart = state.find(product => product.id === action.payload.product.id);
-  } else if (action.type === ActionTypes.REMOVE_FROM_CART) {
-    productAlreadyInCart = state.find(product => product.id === action.payload.product.id);
-  }
+  const productAlreadyInCart = state.find(product => product.id === action.payload.product.id);
 
   switch (action.type) {
       
@@ -70,6 +63,7 @@ export function cartReducer(state: IProduct[], action: IAction) {
     
     // Add a case to delete a product from the cart
     case ActionTypes.DELETE_FROM_CART:
+
       // If there is no product ID or the product is not in the cart, return the current state
       if (!action.payload.product.id || !productAlreadyInCart) return state;
 

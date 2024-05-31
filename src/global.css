@@ -4,6 +4,10 @@
 
 @layer components {
   body {
-    @apply bg-background py-8 font-roboto;
+    @apply bg-background py-8 font-roboto w-screen;
+  }
+
+  input {
+    @apply focus:outline-none
   }
 }
